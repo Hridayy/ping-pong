@@ -20,16 +20,35 @@ var ball = {
     dx:3,
     dy:3
 }
-
 function setup(){
-  var canvas =  createCanvas(700,600);
+  var canvas =  createCanvas(700,500);
+	canvas.parent('canvas')
+video=createCapture(VIDEO)
+video.size(750,350)
+video.parent("game_console")
+poseNet=ml5.poseNet(video,modalLoaded)
+poseNet.on('pose',gotPoses)
+}
+function gotPoses(results){
+	if(results.length>0){
+		wristX=results[0].pose.rightwrist.x;
+		wristY=results[0].pose.rightwrist.y;
+		
+	}
+}
+function modalLoaded(){
+	console.log("modelLoaded!")
 }
 
 
 function draw(){
-
+//game();
  background(0); 
-
+if(score1>0.2){
+  fill("red");
+  stroke("red");
+  circle(175,240,20);
+}
  fill("black");
  stroke("black");
  rect(680,0,20,700);

@@ -9,3 +9,30 @@
     float: right;
 border:rebeccapurple dashed 2px ;
 }
+h4 {
+    line-height: 2;
+    background-color: yellowgreen;
+    margin: 0px;
+    color: black;
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+    width: 100%
+}
+.modal-dialog{
+    width: 90%;
+}
+.instruction{
+    display: inline-block;
+    width: 45%;
+}
+video{
+    position: center;
+    background-size: cover;
+    padding: 25px;
+    background: url("game_console.png");
+
+}
+canvas{
+    border: solid greenyellow 5px;
+}
