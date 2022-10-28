@@ -26,9 +26,10 @@ rightWristX = 0;
 scoreRightWrist = 0;
 
 game_status = "";//Define a variable to hold the status of the game
-
-
-
+function preload(){
+ball_touch=loadsound(ball_touch_paddel.wav)
+missed=loadsound(missed.wav)
+}
 function setup() {
   var canvas = createCanvas(700, 600);
   canvas.parent('canvas');
